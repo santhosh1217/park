@@ -58,4 +58,67 @@ urlpatterns = [
     path("department/civil/year/second/", views.civil_second),
     path("department/civil/year/third/", views.civil_third),
     path("department/civil/year/final/", views.civil_final),
+
+    path("department/cse/year/first/admin",views.cse1_admin),
+    path("department/cse/year/second/admin", views.cse2_admin),
+    path("department/cse/year/third/admin", views.cse3_admin),
+    path("department/cse/year/final/admin", views.cse4_admin),
+
+    path("department/it/year/first/admin", views.it1_admin),
+    path("department/it/year/second/admin", views.it2_admin),
+    path("department/it/year/third/admin", views.it3_admin),
+    path("department/it/year/final/admin", views.it4_admin),
+
+    path("department/cse/year/first/admin", views.eee1_admin),
+    path("department/cse/year/second/admin", views.eee2_admin),
+    path("department/cse/year/third/admin", views.eee3_admin),
+    path("department/cse/year/final/admin", views.eee4_admin),
+
+    path("department/cse/year/first/admin", views.ece1_admin),
+    path("department/cse/year/second/admin", views.ece2_admin),
+    path("department/cse/year/third/admin", views.ece3_admin),
+    path("department/cse/year/final/admin", views.ece4_admin),
+
+    path("department/cse/year/first/admin", views.mech1_admin),
+    path("department/cse/year/second/admin", views.mech2_admin),
+    path("department/cse/year/third/admin", views.mech3_admin),
+    path("department/cse/year/final/admin", views.mech4_admin),
+
+    path("department/cse/year/first/admin", views.civil1_admin),
+    path("department/cse/year/second/admin", views.civil2_admin),
+    path("department/cse/year/third/admin", views.civil3_admin),
+    path("department/cse/year/final/admin", views.civil4_admin),
+
+    path("department/cse/year/first/adddata",views.cse1_adddata),
+    path("department/cse/year/second/adddata", views.cse2_adddata),
+    path("department/cse/year/third/adddata", views.cse3_adddata),
+    path("department/cse/year/final/adddata", views.cse4_adddata),
+
+    path("department/it/year/first/adddata", views.it1_adddata),
+    path("department/it/year/second/adddata", views.it2_adddata),
+    path("department/it/year/third/adddata", views.it3_adddata),
+    path("department/it/year/final/adddata", views.it4_adddata),
+
+    path("department/ece/year/first/adddata", views.ece1_adddata),
+    path("department/ece/year/second/adddata", views.ece2_adddata),
+    path("department/ece/year/third/adddata", views.ece3_adddata),
+    path("department/ece/year/final/adddata", views.ece4_adddata),
+
+    path("department/eee/year/first/adddata", views.eee1_adddata),
+    path("department/eee/year/second/adddata", views.eee2_adddata),
+    path("department/eee/year/third/adddata", views.eee3_adddata),
+    path("department/eee/year/final/adddata", views.eee4_adddata),
+
+    path("department/mech/year/first/adddata", views.mech1_adddata),
+    path("department/mech/year/second/adddata", views.mech2_adddata),
+    path("department/mech/year/third/adddata", views.mech3_adddata),
+    path("department/mech/year/final/adddata", views.mech4_adddata),
+
+    path("department/civil/year/first/adddata", views.civil1_adddata),
+    path("department/civil/year/second/adddata", views.civil2_adddata),
+    path("department/civil/year/third/adddata", views.civil3_adddata),
+    path("department/civil/year/final/adddata", views.civil4_adddata),
+
+
+
 ]
