@@ -80,16 +80,21 @@
 		<th>Attendance</th>
 		
 	</tr>
+		{% for data in detial %}
 	<tr>
-		<td>1</td>
-		<td>01</td>
-		<td>abc</td>
+
+		<td>{{data.id}}</td>
+		<td>{{data.reg}}</td>
+		<td>{{data.name}}</td>
 		<td><input type="checkbox" name=""></td>
+
+
 		
 
 
 		
 	</tr>
+			{% endfor %}
 	
 	</table>
 <br><br>

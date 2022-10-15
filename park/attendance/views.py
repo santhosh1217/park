@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from attendance import models
 
 # Create your views here.
@@ -28,185 +28,209 @@ def year(request):
 
 #cse
 def cse_first(request):
-    message = {"year": "first year","department":"computer science "}
+    record = models.cse1.objects.all()
+    message = {"year": "first year","department":"computer science","detial":record }
     return render(request,"attendance.html",message)
 
 def cse_second(request):
-    message = {"year": "second year","department":"computer science "}
+    record = models.cse2.objects.all()
+    message = {"year": "second year","department":"computer science ","detial":record}
     return render(request,"attendance.html",message)
 
 def cse_third(request):
-    message = {"year": "third year","department":"computer science "}
+    record = models.cse3.objects.all()
+    message = {"year": "third year","department":"computer science","detial":record}
     return render(request,"attendance.html",message)
 
 def cse_final(request):
-    message = {"year": "final year","department":"computer science "}
+    record = models.cse4.objects.all()
+    message = {"year": "final year","department":"computer science ","detial":record}
     return render(request,"attendance.html",message)
 
 #it
 def it_first(request):
-    message = {"year": "first year","department":"information technology "}
+    record = models.it1.objects.all()
+    message = {"year": "first year","department":"information technology ","detial":record}
     return render(request,"attendance.html",message)
 
 def it_second(request):
-    message = {"year": "second year","department":"information technology "}
+    record = models.it2.objects.all()
+    message = {"year": "second year","department":"information technology ","detial":record}
     return render(request,"attendance.html",message)
 
 def it_third(request):
-    message = {"year": "third year","department":"information technology"}
+    record = models.it3.objects.all()
+    message = {"year": "third year","department":"information technology","detial":record}
     return render(request,"attendance.html",message)
 
 def it_final(request):
-    message = {"year": "final year","department":"information technology"}
+    record = models.it4.objects.all()
+    message = {"year": "final year","department":"information technology","detial":record}
     return render(request,"attendance.html",message)
 
 #ece
 def ece_first(request):
-    message = {"year": "first year","department":"electronics and communication engineering"}
+    record = models.ece1.objects.all()
+    message = {"year": "first year","department":"electronics and communication engineering","detial":record}
     return render(request,"attendance.html",message)
 
 def ece_second(request):
-    message = {"year": "second year","department":"electronics and communication engineering"}
+    record = models.ece2.objects.all()
+    message = {"year": "second year","department":"electronics and communication engineering","detial":record}
     return render(request,"attendance.html",message)
 
 def ece_third(request):
-    message = {"year": "third year","department":"electronics and communication engineering"}
+    record = models.ece3.objects.all()
+    message = {"year": "third year","department":"electronics and communication engineering","detial":record}
     return render(request,"attendance.html",message)
 
 def ece_final(request):
-    message = {"year": "final year","department":"electronics and communication engineering"}
+    record = models.ece4.objects.all()
+    message = {"year": "final year","department":"electronics and communication engineering","detial":record}
     return render(request,"attendance.html",message)
 
 #mech
 def mech_first(request):
-    message = {"year": "first year","department":"mechanical"}
+    record = models.mech1.objects.all()
+    message = {"year": "first year","department":"mechanical","detial":record}
     return render(request,"attendance.html",message)
 
 def mech_second(request):
-    message = {"year": "second year","department":"mechanical"}
+    record = models.mech2.objects.all()
+    message = {"year": "second year","department":"mechanical","detial":record}
     return render(request,"attendance.html",message)
 
 def mech_third(request):
-    message = {"year": "third year","department":"mechanical"}
+    record = models.mech3.objects.all()
+    message = {"year": "third year","department":"mechanical","detial":record}
     return render(request,"attendance.html",message)
 
 def mech_final(request):
-    message = {"year": "final year","department":"mechanical"}
+    record = models.mech4.objects.all()
+    message = {"year": "final year","department":"mechanical","detial":record}
     return render(request,"attendance.html",message)
 
 
 def civil_first(request):
-    message = {"year": "first year","department":"civil"}
+    record = models.civil1.objects.all()
+    message = {"year": "first year","department":"civil","detial":record}
     return render(request,"attendance.html",message)
 
 def civil_second(request):
-    message = {"year": "second year","department":"civil"}
+    record = models.civil2.objects.all()
+    message = {"year": "second year","department":"civil","detial":record}
     return render(request,"attendance.html",message)
 
 def civil_third(request):
-    message = {"year": "third year","department":"civil"}
+    record = models.civil3.objects.all()
+    message = {"year": "third year","department":"civil","detial":record}
     return render(request,"attendance.html",message)
 
 def civil_final(request):
-    message = {"year": "final year","department":"civil"}
+    record = models.civil4.objects.all()
+    message = {"year": "final year","department":"civil","detial":record}
     return render(request,"attendance.html",message)
 
 
 def eee_first(request):
-    message = {"year": "first year","department":"electrical and electronics engineering"}
+    record = models.eee1.objects.all()
+    message = {"year": "first year","department":"electrical and electronics engineering","detial":record}
     return render(request,"attendance.html",message)
 
 def eee_second(request):
-    message = {"year": "second year","department":"electrical and electronics engineering"}
+    record = models.eee2.objects.all()
+    message = {"year": "second year","department":"electrical and electronics engineering","detial":record}
     return render(request,"attendance.html",message)
 
 def eee_third(request):
-    message = {"year": "third year","department":"electrical and electronics engineering"}
+    record = models.eee3.objects.all()
+    message = {"year": "third year","department":"electrical and electronics engineering","detial":record}
     return render(request,"attendance.html",message)
 
 def eee_final(request):
-    message = {"year": "final year","department":"electrical and electronics engineering"}
+    record = models.eee4.objects.all()
+    message = {"year": "final year","department":"electrical and electronics engineering","detial":record}
     return render(request,"attendance.html",message)
 
 
 def cse1_admin(request):
-    mydata = models.cse1.objects.all()
-    return render(request,"addstudent.html",{"datas":mydata})
+    data = models.cse1.objects.all()
+    return render(request,"addstudent.html",{"mydata":data})
 def cse2_admin(request):
-    mydata = models.cse2.objects.all()
-    return render(request,"addstudent.html",{"datas":mydata})
+    data = models.cse2.objects.all()
+    return render(request,"addstudent.html",{"mydata":data})
 def cse3_admin(request):
     data = models.cse3.objects.all()
     return render(request,"addstudent.html",{"mydata":data})
 def cse4_admin(request):
-    mydata = models.cse4.objects.all()
-    return render(request,"addstudent.html",{"datas":mydata})
+    data = models.cse4.objects.all()
+    return render(request,"addstudent.html",{"mydata":data})
 
 def it1_admin(request):
-    mydata = models.it1.objects.all()
-    return render(request,"addstudent.html",{"datas":mydata})
+    data = models.it1.objects.all()
+    return render(request,"addstudent.html",{"mydata":data})
 def it2_admin(request):
-    mydata = models.it2.objects.all()
-    return render(request,"addstudent.html",{"datas":mydata})
+    data = models.it2.objects.all()
+    return render(request,"addstudent.html",{"mydata":data})
 def it3_admin(request):
-    mydata = models.it3.objects.all()
-    return render(request,"addstudent.html",{"datas":mydata})
+    data = models.it3.objects.all()
+    return render(request,"addstudent.html",{"mydata":data})
 def it4_admin(request):
-    mydata = models.it4.objects.all()
-    return render(request,"addstudent.html",{"datas":mydata})
+    data = models.it4.objects.all()
+    return render(request,"addstudent.html",{"mydata":data})
 
 def ece1_admin(request):
-    mydata = models.ece1.objects.all()
-    return render(request,"addstudent.html",{"datas":mydata})
+    data = models.ece1.objects.all()
+    return render(request,"addstudent.html",{"mydata":data})
 def ece2_admin(request):
-    mydata = models.ece2.objects.all()
-    return render(request,"addstudent.html",{"datas":mydata})
+    data = models.ece2.objects.all()
+    return render(request,"addstudent.html",{"mydata":data})
 def ece3_admin(request):
-    mydata = models.ece3.objects.all()
-    return render(request,"addstudent.html",{"datas":mydata})
+    data = models.ece3.objects.all()
+    return render(request,"addstudent.html",{"mydata":data})
 def ece4_admin(request):
-    mydata = models.ece4.objects.all()
-    return render(request,"addstudent.html",{"datas":mydata})
+    data = models.ece4.objects.all()
+    return render(request,"addstudent.html",{"mydata":data})
 
 def eee1_admin(request):
-    mydata = models.eee1.objects.all()
-    return render(request,"addstudent.html",{"datas":mydata})
+    data = models.eee1.objects.all()
+    return render(request,"addstudent.html",{"mydata":data})
 def eee2_admin(request):
-    mydata = models.eee2.objects.all()
-    return render(request,"addstudent.html",{"datas":mydata})
+    data = models.eee2.objects.all()
+    return render(request,"addstudent.html",{"mydata":data})
 def eee3_admin(request):
-    mydata = models.eee3.objects.all()
-    return render(request,"addstudent.html",{"datas":mydata})
+    data = models.eee3.objects.all()
+    return render(request,"addstudent.html",{"mydata":data})
 def eee4_admin(request):
-    mydata = models.eee4.objects.all()
-    return render(request,"addstudent.html",{"datas":mydata})
+    data = models.eee4.objects.all()
+    return render(request,"addstudent.html",{"mydata":data})
 
 def mech1_admin(request):
-    mydata = models.mech1.objects.all()
-    return render(request,"addstudent.html",{"datas":mydata})
+    data = models.mech1.objects.all()
+    return render(request,"addstudent.html",{"mydata":data})
 def mech2_admin(request):
-    mydata = models.mech2.objects.all()
-    return render(request,"addstudent.html",{"datas":mydata})
+    data = models.mech2.objects.all()
+    return render(request,"addstudent.html",{"mydata":data})
 def mech3_admin(request):
-    mydata = models.mech3.objects.all()
-    return render(request,"addstudent.html",{"datas":mydata})
+    data = models.mech3.objects.all()
+    return render(request,"addstudent.html",{"mydata":data})
 def mech4_admin(request):
-    mydata = models.mech4.objects.all()
-    return render(request,"addstudent.html",{"datas":mydata})
+    data = models.mech4.objects.all()
+    return render(request,"addstudent.html",{"mydata":data})
 
 def civil1_admin(request):
-    mydata = models.civil1.objects.all()
-    return render(request,"addstudent.html",{"datas":mydata})
+    data = models.civil1.objects.all()
+    return render(request,"addstudent.html",{"mydata":data})
 def civil2_admin(request):
-    mydata = models.civil2.objects.all()
-    return render(request,"addstudent.html",{"datas":mydata})
+    data = models.civil2.objects.all()
+    return render(request,"addstudent.html",{"mydata":data})
 def civil3_admin(request):
-    mydata = models.civil3.objects.all()
-    return render(request,"addstudent.html",{"datas":mydata})
+    data = models.civil3.objects.all()
+    return render(request,"addstudent.html",{"mydata":data})
 
 def civil4_admin(request):
-    mydata = models.civil4.objects.all()
-    return render(request,"addstudent.html",{"datas":mydata})
+    data = models.civil4.objects.all()
+    return render(request,"addstudent.html",{"mydata":data})
 
 def cse1_adddata(request):
     obj = models.cse1()
@@ -215,7 +239,7 @@ def cse1_adddata(request):
     obj.s_mobile = request.POST["snumber"]
     obj.p_mobile = request.POST["pnumber"]
     obj.save()
-    return render(request,"addstudent.html",)
+    return redirect("http://127.0.0.1:8000/department/cse/year/first/admin")
 
 def cse2_adddata(request):
     obj = models.cse2()
@@ -224,7 +248,7 @@ def cse2_adddata(request):
     obj.s_mobile = request.POST["snumber"]
     obj.p_mobile = request.POST["pnumber"]
     obj.save()
-    return render(request,"addstudent.html",)
+    return redirect("http://127.0.0.1:8000/department/cse/year/second/admin")
 
 def cse3_adddata(request):
     obj = models.cse3()
@@ -233,7 +257,7 @@ def cse3_adddata(request):
     obj.s_mobile = request.POST["snumber"]
     obj.p_mobile = request.POST["pnumber"]
     obj.save()
-    return render(request,"addstudent.html",)
+    return redirect("http://127.0.0.1:8000/department/cse/year/third/admin")
 
 def cse4_adddata(request):
     obj = models.cse4()
@@ -242,7 +266,7 @@ def cse4_adddata(request):
     obj.s_mobile = request.POST["snumber"]
     obj.p_mobile = request.POST["pnumber"]
     obj.save()
-    return render(request,"addstudent.html",)
+    return redirect("http://127.0.0.1:8000/department/cse/year/final/admin")
 
 def it1_adddata(request):
     obj = models.it1()
@@ -251,7 +275,7 @@ def it1_adddata(request):
     obj.s_mobile = request.POST["snumber"]
     obj.p_mobile = request.POST["pnumber"]
     obj.save()
-    return render(request,"addstudent.html",)
+    return redirect("http://127.0.0.1:8000/department/it/year/first/admin")
 
 def it2_adddata(request):
     obj = models.it2()
@@ -260,7 +284,7 @@ def it2_adddata(request):
     obj.s_mobile = request.POST["snumber"]
     obj.p_mobile = request.POST["pnumber"]
     obj.save()
-    return render(request,"addstudent.html",)
+    return redirect("http://127.0.0.1:8000/department/it/year/second/admin")
 
 def it3_adddata(request):
     obj = models.it3()
@@ -269,7 +293,7 @@ def it3_adddata(request):
     obj.s_mobile = request.POST["snumber"]
     obj.p_mobile = request.POST["pnumber"]
     obj.save()
-    return render(request,"addstudent.html",)
+    return redirect("http://127.0.0.1:8000/department/it/year/third/admin")
 
 def it4_adddata(request):
     obj = models.it4()
@@ -278,7 +302,7 @@ def it4_adddata(request):
     obj.s_mobile = request.POST["snumber"]
     obj.p_mobile = request.POST["pnumber"]
     obj.save()
-    return render(request,"addstudent.html",)
+    return redirect("http://127.0.0.1:8000/department/it/year/final/admin")
 
 def ece1_adddata(request):
     obj = models.ece1()
@@ -287,7 +311,7 @@ def ece1_adddata(request):
     obj.s_mobile = request.POST["snumber"]
     obj.p_mobile = request.POST["pnumber"]
     obj.save()
-    return render(request,"addstudent.html",)
+    return redirect("http://127.0.0.1:8000/department/ece/year/first/admin")
 
 def ece2_adddata(request):
     obj = models.ece2()
@@ -296,7 +320,7 @@ def ece2_adddata(request):
     obj.s_mobile = request.POST["snumber"]
     obj.p_mobile = request.POST["pnumber"]
     obj.save()
-    return render(request,"addstudent.html",)
+    return redirect("http://127.0.0.1:8000/department/ece/year/second/admin")
 
 def ece3_adddata(request):
     obj = models.ece3()
@@ -305,7 +329,7 @@ def ece3_adddata(request):
     obj.s_mobile = request.POST["snumber"]
     obj.p_mobile = request.POST["pnumber"]
     obj.save()
-    return render(request,"addstudent.html",)
+    return redirect("http://127.0.0.1:8000/department/ece/year/third/admin")
 
 def ece4_adddata(request):
     obj = models.ece4()
@@ -314,7 +338,7 @@ def ece4_adddata(request):
     obj.s_mobile = request.POST["snumber"]
     obj.p_mobile = request.POST["pnumber"]
     obj.save()
-    return render(request,"addstudent.html",)
+    return redirect("http://127.0.0.1:8000/department/ece/year/final/admin")
 
 def eee1_adddata(request):
     obj = models.eee1()
@@ -323,7 +347,7 @@ def eee1_adddata(request):
     obj.s_mobile = request.POST["snumber"]
     obj.p_mobile = request.POST["pnumber"]
     obj.save()
-    return render(request,"addstudent.html",)
+    return redirect("http://127.0.0.1:8000/department/eee/year/first/admin")
 
 def eee2_adddata(request):
     obj = models.eee2()
@@ -332,7 +356,7 @@ def eee2_adddata(request):
     obj.s_mobile = request.POST["snumber"]
     obj.p_mobile = request.POST["pnumber"]
     obj.save()
-    return render(request,"addstudent.html",)
+    return redirect("http://127.0.0.1:8000/department/eee/year/second/admin")
 
 def eee3_adddata(request):
     obj = models.eee3()
@@ -341,7 +365,7 @@ def eee3_adddata(request):
     obj.s_mobile = request.POST["snumber"]
     obj.p_mobile = request.POST["pnumber"]
     obj.save()
-    return render(request,"addstudent.html",)
+    return redirect("http://127.0.0.1:8000/department/eee/year/third/admin")
 
 def eee4_adddata(request):
     obj = models.eee4()
@@ -350,7 +374,7 @@ def eee4_adddata(request):
     obj.s_mobile = request.POST["snumber"]
     obj.p_mobile = request.POST["pnumber"]
     obj.save()
-    return render(request,"addstudent.html",)
+    return redirect("http://127.0.0.1:8000/department/eee/year/final/admin")
 
 def mech1_adddata(request):
     obj = models.mech1()
@@ -359,7 +383,7 @@ def mech1_adddata(request):
     obj.s_mobile = request.POST["snumber"]
     obj.p_mobile = request.POST["pnumber"]
     obj.save()
-    return render(request,"addstudent.html",)
+    return redirect("http://127.0.0.1:8000/department/mech/year/first/admin")
 
 def mech2_adddata(request):
     obj = models.mech2()
@@ -368,7 +392,7 @@ def mech2_adddata(request):
     obj.s_mobile = request.POST["snumber"]
     obj.p_mobile = request.POST["pnumber"]
     obj.save()
-    return render(request,"addstudent.html",)
+    return redirect("http://127.0.0.1:8000/department/mech/year/second/admin")
 
 def mech3_adddata(request):
     obj = models.mech3()
@@ -377,7 +401,7 @@ def mech3_adddata(request):
     obj.s_mobile = request.POST["snumber"]
     obj.p_mobile = request.POST["pnumber"]
     obj.save()
-    return render(request,"addstudent.html",)
+    return redirect("http://127.0.0.1:8000/department/mech/year/third/admin")
 
 def mech4_adddata(request):
     obj = models.mech4()
@@ -386,7 +410,7 @@ def mech4_adddata(request):
     obj.s_mobile = request.POST["snumber"]
     obj.p_mobile = request.POST["pnumber"]
     obj.save()
-    return render(request,"addstudent.html",)
+    return redirect("http://127.0.0.1:8000/department/mech/year/final/admin")
 
 def civil1_adddata(request):
     obj = models.civil1()
@@ -395,7 +419,7 @@ def civil1_adddata(request):
     obj.s_mobile = request.POST["snumber"]
     obj.p_mobile = request.POST["pnumber"]
     obj.save()
-    return render(request,"addstudent.html",)
+    return redirect("http://127.0.0.1:8000/department/civil/year/first/admin")
 
 def civil2_adddata(request):
     obj = models.civil2()
@@ -404,7 +428,7 @@ def civil2_adddata(request):
     obj.s_mobile = request.POST["snumber"]
     obj.p_mobile = request.POST["pnumber"]
     obj.save()
-    return render(request,"addstudent.html",)
+    return redirect("http://127.0.0.1:8000/department/civil/year/second/admin")
 
 def civil3_adddata(request):
     obj = models.civil3()
@@ -413,7 +437,7 @@ def civil3_adddata(request):
     obj.s_mobile = request.POST["snumber"]
     obj.p_mobile = request.POST["pnumber"]
     obj.save()
-    return render(request,"addstudent.html",)
+    return redirect("http://127.0.0.1:8000/department/civil/year/third/admin")
 
 def civil4_adddata(request):
     obj = models.civil4()
@@ -422,7 +446,7 @@ def civil4_adddata(request):
     obj.s_mobile = request.POST["snumber"]
     obj.p_mobile = request.POST["pnumber"]
     obj.save()
-    return render(request,"addstudent.html",)
+    return redirect("http://127.0.0.1:8000/department/civil/year/final/admin")
 
 
 
