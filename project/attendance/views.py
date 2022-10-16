@@ -254,7 +254,7 @@ def updatecse1(request,id):
         obj.s_mobile = request.POST["s_number"]
         obj.p_mobile = request.POST["p_number"]
         obj.save()
-        return redirect("http://127.0.0.1:8000/cse/first/admin/")
+        return redirect("cse1")
     print(obj)
  
     return render(request,"update.html",{'data':obj}) 
@@ -266,7 +266,7 @@ def updatecse2(request,id):
         obj.s_mobile = request.POST["s_number"]
         obj.p_mobile = request.POST["p_number"]
         obj.save()
-        return redirect("http://127.0.0.1:8000/cse/second/admin/")
+        return redirect("cse2")
     print(obj)
  
     return render(request,"update.html",{'data':obj}) 
@@ -278,7 +278,7 @@ def updatecse3(request,id):
         obj.s_mobile = request.POST["s_number"]
         obj.p_mobile = request.POST["p_number"]
         obj.save()
-        return redirect("http://127.0.0.1:8000/cse/third/admin/")
+        return redirect("cse3")
     print(obj)
  
     return render(request,"update.html",{'data':obj}) 
@@ -290,7 +290,7 @@ def updatecse4(request,id):
         obj.s_mobile = request.POST["s_number"]
         obj.p_mobile = request.POST["p_number"]
         obj.save()
-        return redirect("http://127.0.0.1:8000/cse/final/admin/")
+        return redirect("cse4")
     print(obj)
  
     return render(request,"update.html",{'data':obj}) 
@@ -302,7 +302,7 @@ def updateit1(request,id):
         obj.s_mobile = request.POST["s_number"]
         obj.p_mobile = request.POST["p_number"]
         obj.save()
-        return redirect("http://127.0.0.1:8000/it/first/admin/")
+        return redirect("it1")
     print(obj)
  
     return render(request,"update.html",{'data':obj}) 
@@ -314,7 +314,7 @@ def updateit2(request,id):
         obj.s_mobile = request.POST["s_number"]
         obj.p_mobile = request.POST["p_number"]
         obj.save()
-        return redirect("http://127.0.0.1:8000/it/second/admin/")
+        return redirect("it2")
     print(obj)
  
     return render(request,"update.html",{'data':obj}) 
@@ -326,7 +326,7 @@ def updateit3(request,id):
         obj.s_mobile = request.POST["s_number"]
         obj.p_mobile = request.POST["p_number"]
         obj.save()
-        return redirect("http://127.0.0.1:8000/it/third/admin/")
+        return redirect("it3")
     print(obj)
  
     return render(request,"update.html",{'data':obj}) 
@@ -338,7 +338,7 @@ def updateit4(request,id):
         obj.s_mobile = request.POST["s_number"]
         obj.p_mobile = request.POST["p_number"]
         obj.save()
-        return redirect("http://127.0.0.1:8000/it/final/admin/")
+        return redirect("it4")
     print(obj)
  
     return render(request,"update.html",{'data':obj}) 
@@ -350,7 +350,7 @@ def updateece1(request,id):
         obj.s_mobile = request.POST["s_number"]
         obj.p_mobile = request.POST["p_number"]
         obj.save()
-        return redirect("http://127.0.0.1:8000/ece/first/admin/")
+        return redirect("ece1")
     print(obj)
  
     return render(request,"update.html",{'data':obj}) 
@@ -362,7 +362,7 @@ def updateece2(request,id):
         obj.s_mobile = request.POST["s_number"]
         obj.p_mobile = request.POST["p_number"]
         obj.save()
-        return redirect("http://127.0.0.1:8000/ece/second/admin/")
+        return redirect("ece2")
     print(obj)
  
     return render(request,"update.html",{'data':obj}) 
@@ -374,7 +374,7 @@ def updateece3(request,id):
         obj.s_mobile = request.POST["s_number"]
         obj.p_mobile = request.POST["p_number"]
         obj.save()
-        return redirect("http://127.0.0.1:8000/ece/third/admin/")
+        return redirect("ece3")
     print(obj)
  
     return render(request,"update.html",{'data':obj}) 
@@ -386,7 +386,7 @@ def updateece4(request,id):
         obj.s_mobile = request.POST["s_number"]
         obj.p_mobile = request.POST["p_number"]
         obj.save()
-        return redirect("http://127.0.0.1:8000/ece/final/admin/")
+        return redirect("ece4")
     print(obj)
  
     return render(request,"update.html",{'data':obj}) 
@@ -398,7 +398,7 @@ def updatemech1(request,id):
         obj.s_mobile = request.POST["s_number"]
         obj.p_mobile = request.POST["p_number"]
         obj.save()
-        return redirect("http://127.0.0.1:8000/mech/first/admin/")
+        return redirect("mech1")
     print(obj)
  
     return render(request,"update.html",{'data':obj}) 
@@ -410,7 +410,7 @@ def updatemech2(request,id):
         obj.s_mobile = request.POST["s_number"]
         obj.p_mobile = request.POST["p_number"]
         obj.save()
-        return redirect("http://127.0.0.1:8000/mech/second/admin/")
+        return redirect("mech2")
     print(obj)
  
     return render(request,"update.html",{'data':obj}) 
@@ -422,7 +422,7 @@ def updatemech3(request,id):
         obj.s_mobile = request.POST["s_number"]
         obj.p_mobile = request.POST["p_number"]
         obj.save()
-        return redirect("http://127.0.0.1:8000/mech/third/admin/")
+        return redirect("mech3")
     print(obj)
  
     return render(request,"update.html",{'data':obj}) 
@@ -434,7 +434,7 @@ def updatemech4(request,id):
         obj.s_mobile = request.POST["s_number"]
         obj.p_mobile = request.POST["p_number"]
         obj.save()
-        return redirect("http://127.0.0.1:8000/mech/final/admin/")
+        return redirect("mech4")
     print(obj)
  
     return render(request,"update.html",{'data':obj}) 
@@ -446,7 +446,7 @@ def updateeee1(request,id):
         obj.s_mobile = request.POST["s_number"]
         obj.p_mobile = request.POST["p_number"]
         obj.save()
-        return redirect("http://127.0.0.1:8000/eee/first/admin/")
+        return redirect("eee1")
     print(obj)
  
     return render(request,"update.html",{'data':obj}) 
@@ -458,7 +458,7 @@ def updateeee2(request,id):
         obj.s_mobile = request.POST["s_number"]
         obj.p_mobile = request.POST["p_number"]
         obj.save()
-        return redirect("http://127.0.0.1:8000/eee/second/admin/")
+        return redirect("eee2")
     print(obj)
  
     return render(request,"update.html",{'data':obj}) 
@@ -470,7 +470,7 @@ def updateeee3(request,id):
         obj.s_mobile = request.POST["s_number"]
         obj.p_mobile = request.POST["p_number"]
         obj.save()
-        return redirect("http://127.0.0.1:8000/eee/third/admin/")
+        return redirect("eee3")
     print(obj)
  
     return render(request,"update.html",{'data':obj}) 
@@ -482,7 +482,7 @@ def updateeee4(request,id):
         obj.s_mobile = request.POST["s_number"]
         obj.p_mobile = request.POST["p_number"]
         obj.save()
-        return redirect("http://127.0.0.1:8000/eee/final/admin/")
+        return redirect("4")
     print(obj)
  
     return render(request,"update.html",{'data':obj}) 
@@ -494,7 +494,7 @@ def updatecivil1(request,id):
         obj.s_mobile = request.POST["s_number"]
         obj.p_mobile = request.POST["p_number"]
         obj.save()
-        return redirect("http://127.0.0.1:8000/civil/first/admin/")
+        return redirect("civil1")
     print(obj)
  
     return render(request,"update.html",{'data':obj}) 
@@ -506,7 +506,7 @@ def updatecivil2(request,id):
         obj.s_mobile = request.POST["s_number"]
         obj.p_mobile = request.POST["p_number"]
         obj.save()
-        return redirect("http://127.0.0.1:8000/civil/second/admin/")
+        return redirect("civil2")
     print(obj)
  
     return render(request,"update.html",{'data':obj}) 
@@ -518,7 +518,7 @@ def updatecivil3(request,id):
         obj.s_mobile = request.POST["s_number"]
         obj.p_mobile = request.POST["p_number"]
         obj.save()
-        return redirect("http://127.0.0.1:8000/civil/third/admin/")
+        return redirect("civil3")
     print(obj)
  
     return render(request,"update.html",{'data':obj}) 
@@ -530,7 +530,7 @@ def updatecivil4(request,id):
         obj.s_mobile = request.POST["s_number"]
         obj.p_mobile = request.POST["p_number"]
         obj.save()
-        return redirect("http://127.0.0.1:8000/civil/final/admin/")
+        return redirect("civil4")
     print(obj)
  
     return render(request,"update.html",{'data':obj}) 
@@ -662,7 +662,7 @@ def cse1_adddata(request):
     obj.s_mobile = request.POST["snumber"]
     obj.p_mobile = request.POST["pnumber"]
     obj.save()
-    return redirect('http://127.0.0.1:8000/cse/first/admin/')
+    return redirect('cse1')
 
 def cse2_adddata(request):  
     obj = models.cse2()
@@ -671,7 +671,7 @@ def cse2_adddata(request):
     obj.s_mobile = request.POST["snumber"]
     obj.p_mobile = request.POST["pnumber"]
     obj.save()
-    return redirect('http://127.0.0.1:8000/cse/second/admin/')
+    return redirect('cse2')
 
 def cse3_adddata(request):    
     obj = models.cse3()
@@ -681,7 +681,7 @@ def cse3_adddata(request):
     obj.p_mobile = request.POST["pnumber"]
     obj.save()
     print("path "+str(request.get_full_path))
-    return redirect('http://127.0.0.1:8000/cse/third/admin/')
+    return redirect('cse3')
 
 
 def cse4_adddata(request):     
@@ -692,7 +692,7 @@ def cse4_adddata(request):
     obj.p_mobile = request.POST["pnumber"]
     obj.save()
     print("path "+str(request.get_full_path))
-    return redirect('http://127.0.0.1:8000/cse/final/admin/')
+    return redirect('cse4')
 
 def it1_adddata(request):  
     obj = models.it1()
@@ -701,7 +701,7 @@ def it1_adddata(request):
     obj.s_mobile = request.POST["snumber"]
     obj.p_mobile = request.POST["pnumber"]
     obj.save()
-    return redirect('http://127.0.0.1:8000/it/first/admin/')
+    return redirect('it1')
 
 def it2_adddata(request):
     obj = models.it2()
@@ -710,7 +710,7 @@ def it2_adddata(request):
     obj.s_mobile = request.POST["snumber"]
     obj.p_mobile = request.POST["pnumber"]
     obj.save()
-    return redirect('http://127.0.0.1:8000/it/second/admin/')
+    return redirect('it2')
 
 def it3_adddata(request):
     obj = models.it3()
@@ -719,7 +719,7 @@ def it3_adddata(request):
     obj.s_mobile = request.POST["snumber"]
     obj.p_mobile = request.POST["pnumber"]
     obj.save()
-    return redirect('http://127.0.0.1:8000/it/third/admin/')
+    return redirect('it3')
 
 def it4_adddata(request):
     obj = models.it4()
@@ -728,7 +728,7 @@ def it4_adddata(request):
     obj.s_mobile = request.POST["snumber"]
     obj.p_mobile = request.POST["pnumber"]
     obj.save()
-    return redirect('http://127.0.0.1:8000/it/final/admin/')
+    return redirect('it4')
 
 def ece1_adddata(request):
     obj = models.ece1()
@@ -737,7 +737,7 @@ def ece1_adddata(request):
     obj.s_mobile = request.POST["snumber"]
     obj.p_mobile = request.POST["pnumber"]
     obj.save()
-    return redirect('http://127.0.0.1:8000/ece/first/admin/')
+    return redirect('ece1')
 
 def ece2_adddata(request):
     obj = models.ece2()
@@ -746,7 +746,7 @@ def ece2_adddata(request):
     obj.s_mobile = request.POST["snumber"]
     obj.p_mobile = request.POST["pnumber"]
     obj.save()
-    return redirect('http://127.0.0.1:8000/ece/second/admin/')
+    return redirect('ece2')
 def ece3_adddata(request):
     obj = models.ece3()
     obj.name = request.POST["nam"]
@@ -754,7 +754,7 @@ def ece3_adddata(request):
     obj.s_mobile = request.POST["snumber"]
     obj.p_mobile = request.POST["pnumber"]
     obj.save()
-    return redirect('http://127.0.0.1:8000/ece/third/admin/')
+    return redirect('ece3')
 
 def ece4_adddata(request):
     obj = models.ece4()
@@ -763,7 +763,7 @@ def ece4_adddata(request):
     obj.s_mobile = request.POST["snumber"]
     obj.p_mobile = request.POST["pnumber"]
     obj.save()
-    return redirect('http://127.0.0.1:8000/ece/final/admin/')
+    return redirect('ece4')
 
 def eee1_adddata(request):
     obj = models.eee1()
@@ -772,7 +772,7 @@ def eee1_adddata(request):
     obj.s_mobile = request.POST["snumber"]
     obj.p_mobile = request.POST["pnumber"]
     obj.save()
-    return redirect('http://127.0.0.1:8000/eee/first/admin/')
+    return redirect('eee1')
 
 def eee2_adddata(request):
     obj = models.eee2()
@@ -781,7 +781,7 @@ def eee2_adddata(request):
     obj.s_mobile = request.POST["snumber"]
     obj.p_mobile = request.POST["pnumber"]
     obj.save()
-    return redirect('http://127.0.0.1:8000/eee/second/admin/')
+    return redirect('eee2')
 
 def eee3_adddata(request):
     obj = models.eee3()
@@ -790,7 +790,7 @@ def eee3_adddata(request):
     obj.s_mobile = request.POST["snumber"]
     obj.p_mobile = request.POST["pnumber"]
     obj.save()
-    return redirect('http://127.0.0.1:8000/eee/third/admin/')
+    return redirect('eee3')
 
 def eee4_adddata(request):
     obj = models.eee4()
@@ -799,7 +799,7 @@ def eee4_adddata(request):
     obj.s_mobile = request.POST["snumber"]
     obj.p_mobile = request.POST["pnumber"]
     obj.save()
-    return redirect('http://127.0.0.1:8000/eee/final/admin/')
+    return redirect('eee4')
 
 def mech1_adddata(request):
     obj = models.mech1()
@@ -808,7 +808,7 @@ def mech1_adddata(request):
     obj.s_mobile = request.POST["snumber"]
     obj.p_mobile = request.POST["pnumber"]
     obj.save()
-    return redirect('http://127.0.0.1:8000/mech/first/admin/')
+    return redirect('mech1')
 
 def mech2_adddata(request):
     obj = models.mech2()
@@ -817,7 +817,7 @@ def mech2_adddata(request):
     obj.s_mobile = request.POST["snumber"]
     obj.p_mobile = request.POST["pnumber"]
     obj.save()
-    return redirect('http://127.0.0.1:8000/mech/second/admin/')
+    return redirect('mech2')
 
 def mech3_adddata(request):
     obj = models.mech3()
@@ -826,7 +826,7 @@ def mech3_adddata(request):
     obj.s_mobile = request.POST["snumber"]
     obj.p_mobile = request.POST["pnumber"]
     obj.save()
-    return redirect('http://127.0.0.1:8000/mech/third/admin/')
+    return redirect('mech3')
 
 def mech4_adddata(request):
     obj = models.mech4()
@@ -835,7 +835,7 @@ def mech4_adddata(request):
     obj.s_mobile = request.POST["snumber"]
     obj.p_mobile = request.POST["pnumber"]
     obj.save()
-    return redirect('http://127.0.0.1:8000/mech/final/admin/')
+    return redirect('mech4')
 
 def civil1_adddata(request):
     obj = models.civil1()
@@ -844,7 +844,7 @@ def civil1_adddata(request):
     obj.s_mobile = request.POST["snumber"]
     obj.p_mobile = request.POST["pnumber"]
     obj.save()
-    return redirect('http://127.0.0.1:8000/civil/first/admin/')
+    return redirect('civil1')
 
 def civil2_adddata(request):
     obj = models.civil2()
@@ -853,7 +853,7 @@ def civil2_adddata(request):
     obj.s_mobile = request.POST["snumber"]
     obj.p_mobile = request.POST["pnumber"]
     obj.save()
-    return redirect('http://127.0.0.1:8000/civil/second/admin/')
+    return redirect('civil2')
 
 def civil3_adddata(request):
     obj = models.civil3()
@@ -862,7 +862,7 @@ def civil3_adddata(request):
     obj.s_mobile = request.POST["snumber"]
     obj.p_mobile = request.POST["pnumber"]
     obj.save()
-    return redirect('http://127.0.0.1:8000/civil/third/admin/')
+    return redirect('civil3')
 
 def civil4_adddata(request):
     obj = models.civil4()
@@ -871,19 +871,29 @@ def civil4_adddata(request):
     obj.s_mobile = request.POST["snumber"]
     obj.p_mobile = request.POST["pnumber"]
     obj.save()
-    return redirect('http://127.0.0.1:8000/civil/final/admin/')
+    return redirect('civil4')
 
 def cse3_submit(request):
+    l =[]
     obj = models.cse3.objects.all()
+
+   
     for i in obj:
-        print(i.name)
-        print(i.reg)
-        if models.cse3.objects.get(name = str(request.POST[str(i.reg)])):
+        if request.POST.get(str(i.id),False):
+            print("present student :"+i.name)
+            i.attendance=True
+            l.append(i.name)
+            
+        
+        
 
-            print(str(request.POST(str(i.reg))))
+    print(l)
+    return redirect("cse_first")
 
 
-    return redirect("http://127.0.0.1:8000/cse/third/")
+
+
+    
 
 
     

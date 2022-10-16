@@ -84,7 +84,7 @@ urlpatterns = [
 
     path("cse/first/",views.cse_first),
     path("cse/second/", views.cse_second),
-    path("cse/third/", views.cse_third),
+    path("cse/third/", views.cse_third,name="cse_first"),
     path("cse/final/", views.cse_final),
 
     path("ece/first/", views.ece_first),
@@ -171,6 +171,7 @@ urlpatterns = [
     path("civil/second/admin/adddata", views.civil2_adddata),
     path("civil/third/admin/adddata", views.civil3_adddata),
     path("civil/final/admin/adddata", views.civil4_adddata),
+
     path("cse/third/submit/",views.cse3_submit),
 
 

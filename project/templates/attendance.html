@@ -72,7 +72,7 @@
 	</form>
 	<hr>
 	<br>
-	<form method="post" action="#">
+	<form method="post" action="submit/">
 		{%csrf_token%}
 	<table class="table  table-bordered table-hover">
 		<tr>
@@ -86,7 +86,7 @@
 			<td>{{data.id}}</td>
 			<td>{{data.reg}}</td>
 			<td>{{data.name}}</td>
-			<td><input type="checkbox" value={{data.name}} name={{data.reg}}></td>
+			<td><input type="checkbox" value={{data.name}} name={{data.id}}></td>
 		</tr>
 		{% endfor %}
 	</table>
