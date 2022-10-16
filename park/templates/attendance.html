@@ -65,12 +65,12 @@
 		
 	</div>
 	
-	
+	<form action="admin" method="post">
+			{% csrf_token %}
 	<div class="container">
 		<lable>{{department}}</lable>
 		<label id="year">{{year}}(Attendance Sheet)</label>
-		<form action="admin" method="post">
-			{% csrf_token %}
+		
 			<button class="btn btn-outline-danger">edit</button>
 		</form>
 
