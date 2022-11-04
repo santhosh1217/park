@@ -1,8 +1,17 @@
+from distutils.command.upload import upload
 from email.policy import default
 from django.db import models
 
 
 # Create your models here.
+class college(models.Model):
+    username  = models.CharField( max_length=50)
+    password = models.CharField( max_length=20)
+    name=models.TextField()
+    logo = models.ImageField( upload_to="pics")
+    
+
+
 class cse1(models.Model):
     name = models.TextField()
     reg = models.TextField()

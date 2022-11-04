@@ -2,6 +2,7 @@ from django.contrib import admin
 from attendance import models
 
 # Register your models here.
+admin.site.register(models.college)
 admin.site.register(models.cse1)
 admin.site.register(models.cse2)
 admin.site.register(models.cse3)
