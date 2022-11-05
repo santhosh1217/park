@@ -15,7 +15,7 @@ body{
 	width: 400px;
 	height: 380px;
 	border-radius: 10%;
-	margin-left: 3%;
+	margin-left: 40%;
 	padding-top: 18px;
 }
 
@@ -132,7 +132,7 @@ body {
 
 .button-box{
 	margin-top: 40px;
-   
+   margin-left:40%;
     margin-left: 100px;
     position: relative;
     border-radius: 30px;
