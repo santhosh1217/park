@@ -12,38 +12,120 @@
 <body>
 	<form method="post"  action="submit" enctype="multipart/form-data">
 		{% csrf_token %}
+
 		<div class="full">
+			<a href="#" id="refresh" hidden></a>
+		
+			{% if msg %}
+				<p  id='msg' >{{msg}}</p>
+			{% endif %}
+			
 			<label>username:
-			<input type="text" name="username" required>
+			<input type="text" id="username" name="username"  required>
 			</label><br><br>
 			<label>password:
-				<input id="p1" type="password" name="password" required>
+				<input id="p1" type="password" id="password" name="password"  required>
 			</label><br><br>
 
 			<label>confirm password:
-				<input id="p2" type="password" name="confirmPassword" required>
-				<p color:"red">{{msg}}</p>
+				<input id="p2" type="password" id="confirmPassword" name="confirmPassword"  required>
+				
 
 			</label><br><br>
 
-			<p id="msg"></p>
+	
 			<label>insitution name:
-				<input type="text" name="instituteName" required>
+				<input type="text" id="instituteName"  name="instituteName" required>
 				
 			</label><br><br>
 			<label>institution logo:
-				<input type="file" name="logo" required accept="image/*" >
+				<input type="file" name="logo" accept="image/*" required >
 
 			</label><br><br><BR>
-			<button class="btn" >
+			<button class="btn" onclick="Call()"  >
 				Sign UP
 			</button>
+			
 
 			
-		</div>
+		
 		
 
 	</form>
+	
+	</div>
+	<form action="signup" >
+		<button id="hack" hidden ></button>
+	</form>
+	
+	<style>
+		.full
+		{
+			padding-bottom: 35%;
+		}
+
+		#msg
+		{
+			border: 1px solid red;
+			width: 90%;
+			color: red;
+			font-size:120%;
+			text-align: center;
+			background-color: rgba(0, 0, 0, 0.356);
+			border-radius: 2%;
+			border-color: red;
+			margin-bottom: 10%;
+			
+			
+
+
+
+		}
+	</style>
+	<script>
+		function Call()
+		{
+			
+			alert(document.getElementById("password").value);
+			var ps2 = document.getElementById("confirmPassword").value;
+			alert(ps1);
+			alert(ps2);
+			if (ps1 == ps2)
+				alert("crt");
+			else{
+				alert("pass");
+			}
+		}
+	
+		function Func()
+		{
+			
+			document.getElementById("hack").click();
+
+			
+		}
+		
+		var k = document.getElementById("msg").innerHTML ;
+
+		if (k =="username exist")
+		{
+			document.getElementById("username").style.borderBottom = "1px solid red";
+			setTimeout(Func,3000);
+		}
+
+		if (k=="institute name already exists")
+		{
+			document.getElementById("instituteName").style.borderBottom = "1px solid red";
+			setTimeout(Func,3000);	
+		}
+		if (k=="password not match")
+		{
+			document.getElementById("password").style.borderBottom = "1px solid red";
+			document.getElementById("confirmPassword").style.borderBottom = "1px solid red";
+			setTimeout(Func,3000);
+
+		}
+	</script>
 
 
 

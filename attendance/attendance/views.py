@@ -15,23 +15,27 @@ def signup(request):
     return render(request,"institute signup.html")
 
 ######################################### sign up form validation #####################################################
+
 def submit(request):
     obj =  models.college()
     obj.username = request.POST["username"]
-    
     obj.password = request.POST['password']
     obj.name = request.POST["instituteName"]
     obj.logo = request.FILES.get("logo","game")
-    if request.POST['password'] == request.POST['confirmPassword']:
-        print(request.POST["username"])
-        print(models.college.objects.filter(username=request.POST["username"]).exists)
-        if models.college.objects.filter(username=request.POST["username"]).exists():
+    if models.college.objects.filter(username=request.POST["username"]).exists():
              return render(request,"institute signup.html",{"msg":"username exist"})
-        else:
-            obj.save()
-            return redirect("home")
     else:
-        return render(request,"institute signup.html",{"msg":"password not matching"})
+        if request.POST['password'] == request.POST['confirmPassword']:
+
+            if models.college.objects.filter(name=request.POST["instituteName"]).exists():
+                return render(request,"institute signup.html",{"msg":"institute name already exists"})
+            else:
+                obj.save()
+                return redirect("home")
+        else:
+            return render(request,"institute signup.html",{"msg":"password not match"})
+
+        
     
 ################################################################# login ############################################################
 
@@ -55,11 +59,11 @@ def login(request,id):
                         return render(request,"addstaff.html")
                 
                 else:
-                    messages.info(request,"password not matching")
+                    messages.info(request,"2")
                     return redirect("home")
 
             else:
-                messages.info(request,"username not found")
+                messages.info(request,"1")
                 return redirect("home")
 
 
@@ -75,11 +79,11 @@ def login(request,id):
                     return render(request,"department.html",{"name":obj1.name,"logo":obj1.logo.url})
 
                 else:
-                    messages.info(request,"password not matching")
+                    messages.info(request,"4")
                     return redirect("home")
 
             else:
-                messages.info(request,"username not found")
+                messages.info(request,"3")
                 return redirect("home")
 
 
@@ -119,16 +123,20 @@ def addstaffs(request,id):
     data=models.Staff.objects.all()
     obj=models.Staff()
     if request.method=='POST':
-        obj.staffName = request.POST["s_name"]
-        obj.staffDep = request.POST["s_dep"]
-        obj.staffPosition = request.POST["s_position"]
-        obj.staffUsername = request.POST["s_username"]
-        obj.staffPassword= request.POST["s_password"]
-        obj1 = models.college.objects.get(username=id)
-        obj.staffCollege = obj1.name
-        obj.save()
-        data=models.Staff.objects.all()
-        return redirect("admin",id)
+
+        if models.Staff.objects.filter(staffUsername=request.POST["s_username"]).exists():
+            messages.info(request,"username exists")
+            return redirect("admin",id)
+        else:        
+            obj.staffName = request.POST["s_name"]
+            obj.staffDep = request.POST["s_dep"]
+            obj.staffPosition = request.POST["s_position"]
+            obj.staffUsername = request.POST["s_username"]
+            obj.staffPassword= request.POST["s_password"]
+            obj1 = models.college.objects.get(username=id)
+            obj.staffCollege = obj1.name
+            obj.save()
+            return redirect("admin",id)
 
 ########################################################### UPDATE ################################################################### 
 

@@ -152,6 +152,9 @@ table{
             <tt><label>Staff_username</label></tt>
             <input type="text" class="form-control" name="s_username" >
         </div>
+         {% for i in messages %}
+         <p>{{i}}</p>
+         {% endfor %}
         <div class="form-group">
             <tt><label>Staff_Password</label></tt>
             <input type="text" class="form-control" name="s_password" >
