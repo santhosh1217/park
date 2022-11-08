@@ -1,6 +1,6 @@
 body{
 	text-transform: capitalize;
-	#background: url(https://s3.amazonaws.com/prod.static-content.quillette.com/2022/06/Student.png);
+	/*background: url(https://s3.amazonaws.com/prod.static-content.quillette.com/2022/06/Student.png);*/
 	background-size:auto;
     width: 50%;
     height: 50%;
